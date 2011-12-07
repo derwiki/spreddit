@@ -1,0 +1,7 @@
+{
+  "AppName"            : "Spreddit",
+  "AppDescription"     : "Have your playlist time decay unless you re-upvote songs you continue to like",
+  "BundleIdentifier"   : "Spreddit",
+  "RequiredInterface"  : 1,
+  "RequiredPermissions": [ "http://*.spotify.com", "http://spotify.com", "http://derwiki.net" ]
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="sp://import/css/shared.css">
+  <link rel="stylesheet" href="sp://import/css/adam.css">
+  <link rel="stylesheet" href="sp://import/css/api.css">
+  <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>
+	var sp = getSpotifyApi(1);
+    $(function() {
+	  $('#currentSong button').click(function(evt) {
+		var resp = sp.trackPlayer.getNowPlayingTrack();
+		$('#currentSong .text').text(resp.track.name);
+		console.log(resp.track.name);
+	  });
+	});
+  </script>
+</head>
+<body>
+
+<h2>Behold! I am a Spotify app</h2>
+
+<button class="add-playlist button icon"
+value="spotify:album:0fqSVcXza5It71LS2BJdLR"><span class="plus"></span>Add as
+Playlist</button><br />
+<br />
+<button class="add-playlist button icon"
+value="spotify:album:0fqSVcXza5It71LS2BJdLR"><span class="share"></span>Share
+me</button>
+<br />
+
+<div id="currentSong">
+  <button class="button">Another shiny button with random text!</button>
+  <span class="text"></span>
+</div>
+
+
+</body>
+</html>
