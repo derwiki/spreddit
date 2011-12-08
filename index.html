@@ -7,15 +7,30 @@
   <link rel="stylesheet" href="sp://import/css/api.css">
   <script language="javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>
-	var sp = getSpotifyApi(1);
+    var sp = getSpotifyApi(1);
     $(function() {
-	  $('#currentSong button').click(function(evt) {
-		var resp = sp.trackPlayer.getNowPlayingTrack();
-		$('#currentSong .text').text(resp.track.name);
-		console.log(resp.track.name);
-	  });
-	});
+      $('#currentSong button').click(function(evt) {
+        var resp = sp.trackPlayer.getNowPlayingTrack();
+        $('#currentSong .text').text(resp.track.name);
+        console.log(resp.track.name);
+      });
+    });
+
+    $(function() {
+      $('#reddit').load('http://linode.lannbox.com:8081/r/test #siteTable');
+    });
   </script>
+  <style>
+    #reddit { padding: 1px; border: 1px solid #666; }
+    .link { padding: 6px; }
+    .link.odd { background-color: #2d2d2d; }
+    .link .rank { display: none; }
+    .link .midcol { float: left; display: none; }
+    .entry .title { text-decoration: underline; font-size: 16px; }
+    .entry .title .domain { display: none; }
+    .entry .buttons li { display: inline; }
+    .clearleft { clear: left; }
+  </style>
 </head>
 <body>
 
@@ -35,6 +50,7 @@ me</button>
   <span class="text"></span>
 </div>
 
+<div id="reddit"></div>
 
 </body>
 </html>

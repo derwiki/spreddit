@@ -7,5 +7,7 @@
     "http://*.spotify.com",
     "http://spotify.com",
     "http://derwiki.net",
-    "http://ajax.googleapis.com" ]
+    "http://ajax.googleapis.com",
+    "http://linode.lannbox.com:8081"
+     ]
 }
